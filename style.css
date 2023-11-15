@@ -1,0 +1,13 @@
+.container{
+  height: 100px;
+  width: 600px;
+  background-color: red;
+  border-style: solid;
+  border-color: aliceblue;
+  border-width: 50px;
+  padding: 20px;
+  margin-left: 30px;
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
