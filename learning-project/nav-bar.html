@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web box project</title>
+    <style>
+        @media screen and (max-width:329px) {
+            li{
+                display: block !important;
+               
+            }
+        }
+        :root{
+           --black:black;
+           --white:white;
+        }
+        .nav-bar{
+            position: sticky;
+            top: 10px;
+            z-index: 1;
+        }
+        li{
+            list-style: none;
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            background-color: var(--black);
+            color: var(--white);
+
+        }
+        ul{
+            background-color: var(--black);
+            
+            
+        }
+        .big-box{
+           
+            width: 1300px;
+            background-color: blueviolet;
+            margin: 80px;
+
+        }
+        .box1{
+            height: 500px ;
+            width: 500px;
+            background-color: brown;
+            margin: 20px;
+            display: inline-block;
+        }
+        .box2{
+            height: 500px ;
+            width: 500px;
+            background-color: rgb(42, 165, 58);
+            margin: 20px;
+            display: inline-block;
+           position: relative;
+           left: 162px;
+        }
+        .texter{
+            height: 100px;
+            width: 1000px;
+    display: flex;
+    justify-content: center; /* Add this line to horizontally center */
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    background-color: coral;
+    margin: 0 auto;
+
+        }
+        .logo::selection{
+            background-color: black;
+        }
+        img{
+            height: 100px;
+            display: inline-block;
+            border-radius: 100px;
+            border: 1px solid black;
+            position: fixed;
+            right: 20px;
+            bottom: 10px;
+            z-index: 1;
+        }
+        .nav-bar-footer{
+            position: relative;
+            bottom: 10px;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="big-box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="texter">
+            Welcome to this website
+        </div>
+
+    </div>
+    <div class="logo">
+        <img src="logo.png" alt="">
+    </div>
+    <div class="nav-bar-footer">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+</body>
+</html>
