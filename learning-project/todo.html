@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do app</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 720px;
+        font-family: 'Arial', sans-serif;
+        background-image: radial-gradient(circle, rgb(242, 136, 43),rgb(180, 180, 24));
+    }
+    .main{
+        border: 0px solid ;
+        border-radius: 10px;
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+        
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+    .header{
+        height: 100px;
+        width: 300px;
+        background-color: rgb(153, 81, 61);
+        color: white;
+        border-radius: 10px 10px 0px 0px;
+        display: flex;
+       justify-content: center;
+        align-items: center;
+    }
+    #textfield{
+        height: 30px;
+        width: 250px;
+        border-radius: 7px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: gray;
+        margin-top: 50px;
+        outline: none;
+        
+   
+    }
+    #textfield::placeholder {
+    font-size: 14px;
+    color: gray; 
+}
+    .btn{
+        height: 50px;
+        width: 250px;
+        background-color:rgb(153, 81, 61);
+        color: white;
+        border: 0px solid black;
+        border-radius: 5px;
+        margin: 15px;
+    }
+    ul li{
+        list-style: none;
+        font-size: 17px;
+        margin-right: 200px;
+        padding: 10px;
+        position: relative;
+
+
+    }
+    li::before{
+        content: "";
+        position: absolute;
+        background-image: url(unchecked.png);
+        height: 25px;
+        width: 25px;
+        background-size: cover;
+        background-position: center;
+        left: -20px;
+
+      
+       
+       border-radius: 50%;
+    }
+    ul li.checked{
+        color: rgb(87, 85, 83);
+        text-decoration: line-through;
+    }
+    ul li.checked::before{
+        content: "";
+        position: absolute;
+        background-image: url(checked.png);
+        height: 25px;
+        width: 25px;
+        background-size: cover;
+        background-position: center;
+        left: -20px;
+    }
+    span{
+        position: absolute;
+        left: 230px;
+        top: 5px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 22px;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        color: #555;
+
+
+    }
+   span:hover{
+    background-color: rgb(153, 81, 61);
+    color: white;
+   }
+ 
+</style>
+<body>
+    <div class="main">
+        <div class="header"><h1>To-Do List</h1></div>
+        <form action="">
+            <input type="text" name="" placeholder="Add a new task" id="textfield">
+        </form>
+        <button class="btn">Add Task</button>
+        <div class="append">
+            <ul id="task-list">
+                <!-- <li class="checked">Task 1</li>
+                <!-- <li>Task 2</li> -->
+                <!-- <li>Task 3</li>  -->
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    let task = document.querySelector('#textfield')
+    let taskList = document.querySelector('#task-list')
+    let button = document.querySelector('button')
+    button.addEventListener('click',function () {
+        let taskitem = document.createElement('li')
+        taskitem.innerHTML = task.value;
+        taskList.appendChild(taskitem);
+        let span = document.createElement('span')
+        span.innerHTML = '\u00d7'
+        taskitem.appendChild(span)
+})
+ taskList.addEventListener('click',function (e) {
+    if(e.target.tagName ==="LI"){
+        e.target.classList.toggle('checked')
+
+    }
+    else if(e.target.tagName ==="SPAN"){
+        e.target.parentElement.remove()
+    }
+ })
+</script>
+</html>
