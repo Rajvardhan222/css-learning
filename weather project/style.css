@@ -1,0 +1,94 @@
+body{
+    margin: 0;padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background: rgb(34,0,79);
+background: radial-gradient(circle, rgba(34,0,79,1) 0%, rgba(205,0,255,1) 100%);
+}
+
+.container{
+   width: 400px;
+   height: 600px;
+   background: rgb(0,184,170);
+   background: linear-gradient(121deg, rgba(0,184,170,1) 0%, rgba(9,121,108,1) 48%, rgba(0,108,255,1) 100%);
+   border-radius: 15px;
+   
+}
+.search{
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+    justify-content: space-between;
+
+}
+.search input{
+    border-radius: 30px;
+    width: 250px;
+    font-size: medium;
+    border-style: none;
+    padding-left: 20px;
+    font-family: 'Dosis', sans-serif;
+   outline: none;
+    
+}
+.search button{
+    border-radius: 50%;
+    border-style: none;
+    
+}
+.search button img{
+    border-radius: 50%;
+    
+}
+.weather{
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 60px;
+}
+#weather-icon{
+    width: 100px;
+    height: 100px;
+   
+}
+h1,h2{
+    font-family: 'Dosis', sans-serif;
+    color: white;
+    font-weight: 700;
+    height: 0px;
+}
+.humidity-wind{
+    display: flex;
+   
+   align-items: center;
+    
+
+}
+h4{
+    font-family: 'Dosis', sans-serif;
+    color: white;
+    font-weight: 400;
+   
+
+}
+.humidity-wind img{
+    width: 40px;
+    height: 40px;
+    margin-left: 40px;
+    
+}
+.hum{
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+}
+.dataw{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+

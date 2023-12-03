@@ -13,14 +13,16 @@
         justify-content: center;
         height: 720px;
         font-family: 'Arial', sans-serif;
-        background-image: radial-gradient(circle, rgb(242, 136, 43),rgb(180, 180, 24));
+        /* background-image: radial-gradient(circle, rgb(242, 43, 189),rgb(94, 24, 180)); */
+        background-image: radial-gradient(circle, #ffd166, #b88652);
+
     }
     .main{
         border: 0px solid ;
         border-radius: 10px;
         box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
-        
-        min-width: 300px;
+        background-image: radial-gradient(circle, rgb(228, 181, 71),rgb(181, 128, 82));
+        max-width: 300px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -101,7 +103,7 @@
     }
     span{
         position: absolute;
-        left: 230px;
+        left: 200px;
         top: 5px;
         text-align: center;
         line-height: 40px;
@@ -140,12 +142,17 @@
     let taskList = document.querySelector('#task-list')
     let button = document.querySelector('button')
     button.addEventListener('click',function () {
+        if (task.value ==="")  {
+            alert('Please Enter a Task')
+        } else{
         let taskitem = document.createElement('li')
         taskitem.innerHTML = task.value;
         taskList.appendChild(taskitem);
         let span = document.createElement('span')
         span.innerHTML = '\u00d7'
         taskitem.appendChild(span)
+        task.value=""
+        }
 })
  taskList.addEventListener('click',function (e) {
     if(e.target.tagName ==="LI"){

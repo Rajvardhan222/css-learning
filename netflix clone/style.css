@@ -1,0 +1,121 @@
+
+
+
+.logo{
+    height: 135px;
+    width: 233px;
+  position: relative;
+  top: -29px;
+}
+.nav{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    height: 100%;
+    width: 99vw;
+    background-image: url('netflixLogo.jpg');
+   background-repeat: no-repeat;
+
+   background-size:100vw ;
+   
+
+}
+.box{
+    height: 100%;
+    width: 99vw;
+   
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+body{
+    background-color: black;
+}
+#signIn{
+    color: white;
+    background-color: red;
+   width: 7%;
+   height: 32px;
+    border-radius: 5px;
+   position: relative;
+   top: 20px;
+    border-style: none;
+   font-weight: bolder;
+}
+.middle{
+  height: 100%;
+  margin: auto auto;
+    color: white;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
+   
+
+}
+#middleHeading{
+text-align: center;
+font-weight:bolder;
+font-size:6vh;
+font-family: 'Mukta', sans-serif;
+font-family: 'Comfortaa', sans-serif;
+
+}
+
+#join{
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    font-size: medium;
+    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Mukta', sans-serif;
+}
+#join2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    font-size: medium;
+    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Mukta', sans-serif;
+}
+.form{
+ 
+
+}
+#email{
+    height: 46px;
+    width: 369px;
+    background-color: rgba(0, 0, 0, 0.742);
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-left:100px;
+    margin-top: 20px;
+}
+#email::placeholder{
+    color: rgb(162, 164, 165);
+  
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#submit{
+    height: 46px;
+    width: 210px;
+    background-color: red;
+    color: white;
+    font-size: 25px;
+    font-weight:900;
+    border-radius: 3px;
+    border: none ;
+    font-family: 'Roboto', sans-serif;
+    
+
+}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Mukta:wght@300;800&family=Roboto:wght@300&display=swap" rel="stylesheet">

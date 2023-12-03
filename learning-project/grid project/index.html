@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .main{
+           
+            display: flex;
+             justify-content: center;
+             align-items: center;
+             height: 100%;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 300px 300px 300px;
+            grid-template-rows: 160px 160px 160px;
+            gap: 20px;
+
+          
+            text-align: center;
+           
+
+
+        }
+        .item{
+            background-color: #f9f9f9;
+            
+
+        }
+        .dow{
+            background-color:#00b6d1;
+            color: white;
+            height: 30px;
+            border-radius: 5px;
+            border-style: none;
+
+        }
+        .dow2{
+            background-color:#5cb85c;
+            color: white;
+
+            height: 30px;
+            border-style: none;
+
+            border-radius: 5px;
+
+        }
+        @media  screen and (max-width:900px) {
+            .container{
+            display: grid;
+            grid-template-columns: 1fr ;
+           
+            gap: 20px;
+
+          
+            text-align: center;
+           
+
+
+        }
+        .dow{
+            background-color:#00b6d1;
+            color: white;
+            height: 30px;
+            border-radius: 5px;
+            border-style: none;
+            margin: 5px;
+
+        }
+        }
+    </style>
+</head>
+<body><div class="main">
+    <div class="container">
+        <div class="item"><h2>English</h2>
+        <p>language</p>
+        <button class="dow"><b>Download 32 bit</b></button>
+        <button class="dow2"><b>Download 64 bit</b></button>
+        </div>
+        <div class="item"><h2>Deutsch</h2>
+        <p>language</p>
+        <button class="dow"><b>Download 32 bit</b></button>
+        <button class="dow2"><b>Download 64 bit</b></button>
+        </div>
+        <div class="item"><h2>Italiano</h2>
+        <p>language</p>
+        <button class="dow"><b>Download 32 bit</b></button>
+        <button class="dow2"><b>Download 64 bit</b></button>
+        </div>
+        <div class="item"><h2>Español</h2>
+        <p>language</p>
+        <button class="dow"><b>Download 32 bit</b></button>
+        <button class="dow2"><b>Download 64 bit</b></button>
+        </div>
+        <div class="item"><h2>français</h2>
+        <p>language</p>
+        <button class="dow"><b>Download 32 bit</b></button>
+        <button class="dow2"><b>Download 64 bit</b></button>
+        </div>
+        <div class="item"><h2>Português brasileiro</h2>
+        <p>language</p>
+        <button class="dow"><b>Download 32 bit</b></button>
+        <button class="dow2"><b>Download 64 bit</b></button>
+        </div>
+        <div class="item"><h2>日本</h2>
+        <p>language</p>
+        <button class="dow"><b>Download 32 bit</b></button>
+        <button class="dow2"><b>Download 64 bit</b></button>
+        </div>
+        <div class="item"><h2>한국어</h2>
+        <p>language</p>
+        <button class="dow"><b>Download 32 bit</b></button>
+        <button class="dow2"><b>Download 64 bit</b></button>
+        </div>
+        <div class="item"><h2>中国</h2>
+        <p>language</p>
+        <button class="dow"><b>Download 32 bit</b></button>
+        <button class="dow2"><b>Download 64 bit</b></button>
+        </div>
+        <div class="item"><h2>中國</h2>
+        <p>language</p>
+        <button class="dow"><b>Download 32 bit</b></button>
+        <button class="dow2"><b>Download 64 bit</b></button>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

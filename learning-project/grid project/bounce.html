@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(57, 57, 57);
+        }
+        .box {
+            height: 50px;
+            width: 50px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            position: absolute;
+           transition: all 3s ease-in-out 1s;
+            bottom: 0;
+            left: 0; 
+            animation:Z 5s ease infinite;
+
+           
+        }
+
+        .container {
+            position: relative;
+            height: 80vh;
+            width: 80vw;
+            background-color: rgb(0, 0, 0);
+           
+
+            
+        }
+        .transition{
+           
+           
+        
+           
+        }
+        @keyframes X{
+            from{
+                left: 50%;
+                bottom: 50%;
+            }
+            to{
+                left: 40%;
+                bottom: 30%;
+            }
+        }
+ 
+        @keyframes Y{
+            from{
+                left: 50%;
+                bottom: 50%;
+            }
+            to{
+                left: 40%;
+              
+            }
+        }
+        @keyframes Z{
+            from{
+                height: 50px;
+            width: 50px;
+            }
+            to{
+                height: 50000px;
+            width: 50000px;
+              
+            }
+        }
+ 
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box transition">
+        </div>
+    </div>
+    <!-- 
+   
+     -->
+</body>
+
+</html>

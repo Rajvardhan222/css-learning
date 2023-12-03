@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Dosis:wght@500&family=Mukta:wght@300;800&family=Noto+Sans:wght@900&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+            <input type="text" name="" id="search-box" placeholder="City Name">
+            <button id="btn"><img src="search1.png" alt="" height="40px" width="40px"></button>
+        </div>
+        <div class="weather">
+            <img src="cloudy (1).png" alt="" id="weather-icon">
+            <h1 id="temp"></h1>
+            <h2 id="place"></h2>
+            <p><h2 id="weatherCond"></h2>
+            <h4 id="weatherdetail"></h4>
+            </p>
+        </div>
+        
+    <div class="dataw">
+        <div class="humidity-wind">
+            <img src="humidity.png" alt="">
+            <div class="hum">
+                <h2 id="humidity"> </h2>
+                <h4>Humidity</h4>
+            </div>
+        </div>
+        <div class="humidity-wind">
+            <img src="wind.png" alt="">
+            <div class="hum">
+                <h2 id="wind">  </h2>
+                <h4>Wind</h4>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script>
+    let weatherIcon = document.getElementById('weather-icon')
+    let weatherdetail= document.getElementById('weatherdetail')
+    let temp = document.getElementById('temp')
+    let weatherCond = document.getElementById('weatherCond')
+    let place = document.getElementById('place')
+    let wind = document.getElementById('wind')
+    let humidity = document.getElementById('humidity')
+    let APIkey ="b844991c32d59bb949d301d5f73d1980"
+   
+    let search = document.getElementById('search-box')
+    let searchIcon = document.getElementById('btn')
+
+    searchIcon.addEventListener('click',()=>{
+         let cityname = search.value;
+         
+
+         let api = `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${APIkey}&units=metric`
+         fetch(api)
+             .then((response) => {
+                 // Check if the request was successful (status code 200)
+                 if (!response.ok) {
+                     throw new Error('Network response was not ok');
+                      temp.innerHTML = "check name"
+                 }
+                 return response.json();
+             })
+             .then((data) => {
+                 console.log(data);
+                 temp.innerHTML = Math.round(data.main.temp)+" °C";
+                 place.innerHTML = data.name;
+                 wind.innerHTML = data.wind.speed + "KM/hr"
+                 humidity.innerHTML = data.main.humidity + " %"
+                 let id = data.weather[0].id
+                 if (data.weather[0].icon == "01d") {
+                    weatherIcon.setAttribute("src","sun.png")
+                 }
+                 else if(data.weather[0].icon == "02d"){
+                    weatherIcon.setAttribute("src","cloudy (1).png")
+                 }
+                 else if(data.weather[0].icon == "03d"){
+                    weatherIcon.setAttribute("src","scatterdcloud.png")
+                 }
+                 else if(data.weather[0].icon == "04d"){
+                    weatherIcon.setAttribute("src","scatterdcloud.png")
+                 }
+                 else if(data.weather[0].icon == "09d"){
+                    weatherIcon.setAttribute("src","shower.png")
+                 }
+                 else if(data.weather[0].icon == "10d"){
+                    weatherIcon.setAttribute("src","raining.png")
+                 }
+                 else if(data.weather[0].icon == "11d"){
+                    weatherIcon.setAttribute("src","thunder.png")
+                 }
+                 else if(data.weather[0].icon == "13d"){
+                    weatherIcon.setAttribute("src","snow.png")
+                 }
+                 else if(data.weather[0].icon == "50d"){
+                    weatherIcon.setAttribute("src","haze.png")
+                 }
+                 weatherCond.innerHTML = data.weather[0].main;
+                 weatherdetail.innerHTML = data.weather[0].description;
+                 search.value = ""
+                 
+             })
+             .catch(error => {
+                 console.error('There was a problem with the fetch operation:', error);
+                 temp.innerHTML = "check name"
+             });
+            
+    })
+</script>
+</html>
