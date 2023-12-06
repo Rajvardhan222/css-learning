@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Dosis:wght@500&family=Mukta:wght@300;800&family=Noto+Sans:wght@900&family=Poppins:wght@100;200;300;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="images/logo.png" alt="">
+        </a>
+        <div class="nav-link">
+            <ul class="navBar">
+                <a href="#"><i id="cross" class="fa-solid fa-xmark"></i></a>
+                <li><a  href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a  href="blog.html">Blog</a></li>
+                <li><a  href="about.html">About</a></li>
+                <li><a  href="contact.html">Contact</a></li>
+                <li><a  href="shopingBag.html"><i class="fa-solid fa-bag-shopping" id="lg-bag"></i></a></li>
+            </ul>
+        </div>
+        <div class="mobile">
+            <a  href="shopingBag.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i class="fa-solid fa-bars" id="bar"></i>
+        </div>
+    </div>
+    <div class="prods">
+    <div class="pro-img">
+        <div class="big">
+            <img src="images/product/f1.jpg" alt="" id="pimg">
+            <div class="small">
+                <img src="images/product/f1.jpg" alt="">
+                <img src="images/product/f2.jpg" alt="">
+                <img src="images/product/f3.jpg" alt="">
+                <img src="images/product/f4.jpg" alt="">
+            </div>
+        </div>
+        
+    </div>
+    <div class="pro-dec">
+        <h4 id="name">Name</h4>
+        <h3 id="price">price</h3>
+        <select name="" id="">
+            <option value="">Select Size</option>
+            <option value="">X</option>
+            <option value="">XL</option>
+            <option value="">XLL</option>
+            <option value="">Small</option>
+            <option value="">Large</option>
+        </select>
+        <div class="buy">
+            <input type="text" name="" id="">
+            <button>Add To Cart</button>
+        </div>
+        <h5>product detail</h5>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus cum aliquam similique, eum rerum odio cumque recusandae ducimus nostrum, officia distinctio fugit aspernatur minus laudantium magnam delectus mollitia doloremque nulla deserunt. Ipsa nulla hic aliquam.</p>
+
+    </div>
+</div>
+    <div class="news-l sec-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up for Newsletter</h4>
+            <p>Get Email update about our latest shop and <span>special offers</span>.</p>
+        </div>
+        <div class="form">
+            <input type="text" name="" id="" placeholder="Your Email Address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </div>
+    <div class="footer section-m1 sec-p1">
+        <div class="col1">
+            <a href="index.html">
+                <img src="images/logo.png" alt="">
+            </a>
+            <h4>Contact</h4>
+            <h4>Address: <span>Mumbai 201 somthing building</span></h4>
+            <h4>Phone: <span>5369000000</span></h4>
+           <h4>Hours: <span>10 00. 18 00. Mon-Sat</span></h4>
+           <h4>follow Us</h4>
+           <div class="icon">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-github"></i>
+           </div>
+
+        </div>
+        <div class="col2">
+            <h4>About</h4>
+            <p>About Us</p>
+            <p>Delivery Information</p>
+            <p>Privacy Policy</p>
+            <p>Terms and Condition</p>
+            <p>Contact Us</p>
+        </div>
+        <div class="col3">
+            <h4>My Account</h4>
+            <p>Sign In</p>
+            <p>View Cart</p>
+            <p>My Wish List</p>
+            <p>Track My Order</p>
+            <p>Help</p>
+        </div>
+        <div class="col4">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+<script>
+    const productName = sessionStorage.getItem('productName');
+    const productPrice = sessionStorage.getItem('productPrice');
+    const productImage = sessionStorage.getItem('productImage');
+
+
+    document.getElementById('name').innerText = productName;
+    document.getElementById('price').innerText = `$${productPrice}`;
+    document.getElementById('pimg').src = productImage;
+</script>
+</html>
