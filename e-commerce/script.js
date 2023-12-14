@@ -22,3 +22,4 @@ function showProductDetails(name, price, image) {
     // Redirect to proddetail.html
     window.location.href = 'proddetail.html';
   }
+  

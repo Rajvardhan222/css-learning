@@ -34,8 +34,8 @@
     <div class="prods">
     <div class="pro-img">
         <div class="big">
-            <img src="images/product/f1.jpg" alt="" id="pimg">
-            <div class="small">
+            <img id="bigimg"src="images/product/f1.jpg" alt="" id="pimg">
+            <div id="smallimg" class="small">
                 <img src="images/product/f1.jpg" alt="">
                 <img src="images/product/f2.jpg" alt="">
                 <img src="images/product/f3.jpg" alt="">
@@ -124,9 +124,18 @@
     const productPrice = sessionStorage.getItem('productPrice');
     const productImage = sessionStorage.getItem('productImage');
 
-
     document.getElementById('name').innerText = productName;
     document.getElementById('price').innerText = `$${productPrice}`;
     document.getElementById('pimg').src = productImage;
+    let mainimg = document.querySelector('#bigimg')
+  let smallimg = document.querySelector('#smallimg')
+  smallimg.addEventListener('click',(e)=>{
+    console.log(e.target);
+.
+
+//
+/
+/
+  })'/].'
 </script>
 </html>

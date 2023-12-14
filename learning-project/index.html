@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Tracker</h1>
+        </header>
+        <div class="task-form">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+        <ul id="taskList">drink water</ul>
+    </div>
+    <script >
+        
+        
+        // Function to create task element
+const createTaskElement = ({ id, text, completed }) => {
+    const li = document.createElement('li');
+    li.innerHTML = `
+        <input type="checkbox" ${completed ? 'checked' : ''} id="task-${id}">
+        <label for="task-${id}" class="${completed ? 'completed' : ''}">${text}</label>
+        <button class="delete-btn">Delete</button>
+    `;
+
+    // Event listener to delete the task
+    li.querySelector('.delete-btn').addEventListener('click', () => deleteTask(id));
+
+    return li;
+};
+
+// Function to render tasks
+const renderTasks = () => {
+    const taskList = document.getElementById('taskList');
+    taskList.innerHTML = '';
+
+    tasks.forEach(task => {
+        const taskElement = createTaskElement(task);
+        taskList.appendChild(taskElement);
+    });
+};
+
+// Function to add a new task
+const addTask = () => {
+    const taskInput = document.getElementById('taskInput');
+    const taskText = taskInput.value.trim();
+
+    if (taskText !== '') {
+        const newTask = { id: Date.now(), text: taskText, completed: false };
+        tasks.push(newTask);
+        renderTasks();
+        taskInput.value = '';
+    }
+};
+
+// Function to delete a task
+const deleteTask = taskId => {
+    tasks = tasks.filter(task => task.id !== taskId);
+    renderTasks();
+};
+
+// Function to toggle task completion status
+const toggleTaskStatus = taskId => {
+    tasks = tasks.map(task => (task.id === taskId ? { ...task, completed: !task.completed } : task));
+    renderTasks();
+};
+
+// Initialize the app
+let tasks = [];
+renderTasks();
+
+// Event listener for the "Add Task" button
+document.getElementById('addTaskBtn').addEventListener('click', addTask);
+
+    </script>
+</body>
+</html>

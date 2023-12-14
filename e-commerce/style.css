@@ -597,6 +597,16 @@ button.white{
     .news-l {
         margin: 100px 0px;
     }
+    .prods {
+        
+       
+       
+        padding-left: 20px;
+    }
+    .pro-img {
+        
+        width: 100%;
+    }
 }
 @media (max-width:363px) {
     .feature .fe-box {
@@ -623,6 +633,7 @@ button.white{
         height: 31%;
        
     }
+
 }
 .pro-img{
     display: flex;
